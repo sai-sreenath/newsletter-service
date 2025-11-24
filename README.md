@@ -2,19 +2,19 @@ Newsletter Service
 Spring Boot application that schedules newsletter content per topic and emails it to subscribed users at the specified time.
 
 Features
-Manage topics (create/list).
-Manage subscribers and their topic subscriptions.
-Create content with scheduledAt timestamps—one topic per content.
-Quartz scheduler (JDBC store) dispatches content via email at the scheduled time.
-Send logs record per-subscriber delivery status and errors.
+1.Manage topics (create/list).
+2.Manage subscribers and their topic subscriptions.
+3.Create content with scheduledAt timestamps—one topic per content.
+4.Quartz scheduler (JDBC store) dispatches content via email at the scheduled time.
+5.Send logs record per-subscriber delivery status and errors.
 
 Tech Stack
-Spring Boot 3.5
-PostgreSQL 16
-Quartz with JDBC job store
-JavaMailSender (local dev via MailCatcherP)
-Docker/Docker Compose for local Postgres + MailCatcher
-Maven wrapper for builds
+1.Spring Boot 3.5
+2.PostgreSQL 16
+3.Quartz with JDBC job store
+4.JavaMailSender (local dev via MailCatcherP)
+5.Docker/Docker Compose for local Postgres + MailCatcher
+6.Maven wrapper for builds
 
 Local Setup
 ------------
