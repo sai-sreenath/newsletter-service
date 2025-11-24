@@ -33,5 +33,5 @@ Local Setup
 
 3. ./mvnw spring-boot:run
 4. Test API's given in postman export file attached in the repo.
-5. 
+5. Build and run dockerfile.
  
