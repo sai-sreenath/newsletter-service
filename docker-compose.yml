@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  postgres-16:
+    container_name: postgres-16
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/local-infra/postgres-16/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1024M
+
+  mailcatcher:
+    image: sj26/mailcatcher
+    container_name: mailcatcher
+    ports:
+      - '1025:1025'
+      - '1080:1080'

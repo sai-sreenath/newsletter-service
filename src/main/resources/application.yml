@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:password}
+  mail:
+    host: ${SMTP_HOST:localhost}
+    port: ${SMTP_PORT:1025}
+    username: ${SMTP_USER:}
+    password: ${SMTP_PASS:}
+    from: newsletter@example.com
+    properties:
+      mail.smtp.auth: false
+      mail.smtp.starttls.enable: false
+
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    properties:
+      org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+      org.quartz.jobStore.tablePrefix: QRTZ_
+      org.quartz.threadPool.threadCount: 5
+
+server:
+  port: 8080
