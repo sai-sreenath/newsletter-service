@@ -3,7 +3,6 @@ package com.example.newsletterservice.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.Immutable;
 
 import java.time.Instant;
 import java.util.HashSet;

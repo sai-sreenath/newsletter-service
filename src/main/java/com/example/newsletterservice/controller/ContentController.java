@@ -3,7 +3,6 @@ package com.example.newsletterservice.controller;
 import com.example.newsletterservice.dto.CreateContentRequestDTO;
 import com.example.newsletterservice.model.Content;
 import com.example.newsletterservice.model.Topic;
-import com.example.newsletterservice.repository.ContentRepository;
 import com.example.newsletterservice.repository.TopicRepository;
 import com.example.newsletterservice.service.ContentService;
 import org.quartz.SchedulerException;
@@ -12,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
-import java.time.Instant;
 import java.util.Optional;
 
 @RestController
